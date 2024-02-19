@@ -327,6 +327,14 @@
         "output": "True / false",
         "short": "The entire transaction's outputs, inputs, and script (from the most recently-executed OP_CODESEPARATOR to the end) are hashed. The signature used by OP_CHECKSIG must be a valid signature for this hash and public key. If it is, 1 is returned, 0 otherwise."
     },
+    "OP_CHECKSIGADD": {
+        "word": "OP_CHECKSIGADD",
+        "word_alt": "",
+        "opcode": "0xba",
+        "input": "sig n pub",
+        "output": "out",
+        "short": "Three values are popped from the stack. The integer n is incremented by one and returned to the stack if the signature is valid for the public key and transaction. The integer n is returned to the stack unchanged if the signature is the empty vector (OP_0). In any other case, the script is invalid. This opcode is only available in tapscript.[2]"
+    },
     "OP_CHECKSIGVERIFY": {
         "word": "OP_CHECKSIGVERIFY",
         "word_alt": "",
@@ -805,7 +813,7 @@
         "opcode": "0x7b",
         "input": "x1 x2 x3",
         "output": "x2 x3 x1",
-        "short": "The top three items on the stack are rotated to the left."
+        "short": "The 3rd item down the stack is moved to the top."
     },
     "OP_RSHIFT": {
         "word": "OP_RSHIFT",

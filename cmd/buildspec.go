@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"io/ioutil"
 
-	"github.com/Jeiwan/opscript/spec"
+	"github.com/satshub/opscript/spec"
 	"github.com/spf13/cobra"
 )
 

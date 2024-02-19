@@ -5,14 +5,16 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/Jeiwan/opscript/debugger"
-	"github.com/Jeiwan/opscript/spec"
 	"github.com/jroimartin/gocui"
+	"github.com/satshub/opscript/debugger"
+	"github.com/satshub/opscript/spec"
 )
 
 const (
 	keyTilde   = '~'
 	keyQ       = 'q'
+	keyJ       = 'j'
+	keyK       = 'k'
 	viewDebug  = "debug"
 	viewScript = "script"
 	viewSpec   = "spec"
@@ -178,11 +180,11 @@ func (g *GUI) renderCodeLines(v *gocui.View) {
 }
 
 func (g GUI) setKeybindings(c *gocui.Gui) error {
-	if err := c.SetKeybinding(viewScript, gocui.KeyArrowUp, gocui.ModNone, g.cursorUp); err != nil {
+	if err := c.SetKeybinding(viewScript, keyK, gocui.ModNone, g.cursorUp); err != nil {
 		return err
 	}
 
-	if err := c.SetKeybinding(viewScript, gocui.KeyArrowDown, gocui.ModNone, g.cursorDown); err != nil {
+	if err := c.SetKeybinding(viewScript, keyJ, gocui.ModNone, g.cursorDown); err != nil {
 		return err
 	}
 

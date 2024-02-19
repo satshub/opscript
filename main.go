@@ -4,9 +4,9 @@ import (
 	"encoding/json"
 	"os"
 
-	"github.com/Jeiwan/opscript/cmd"
-	"github.com/Jeiwan/opscript/internal"
-	"github.com/Jeiwan/opscript/spec"
+	"github.com/satshub/opscript/cmd"
+	"github.com/satshub/opscript/internal"
+	"github.com/satshub/opscript/spec"
 	"github.com/sirupsen/logrus"
 )
 
